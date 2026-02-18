@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f6fa;
+            margin: 20px;
+        }
+
+        .form-container {
+            width: 400px;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid #cccccc;
+            border-radius: 6px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #999;
+            border-radius: 4px;
+        }
+
+        .gender input {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        .terms {
+            margin-top: 10px;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Registration Form</h2>
+
+        <form>
+            <!-- Name -->
+            <label for="name">Full Name</label>
+            <input type="text" id="name" pattern="[A-Za-z ]+" required
+                   title="Name should contain only alphabets">
+
+            <!-- Email -->
+            <label for="email">Email</label>
+            <input type="email" id="email" required>
+
+            <!-- Password -->
+            <label for="password">Password</label>
+            <input type="password" id="password" minlength="6" required
+                   title="Password must be at least 6 characters">
+
+            <!-- Confirm Password -->
+            <label for="confirm">Confirm Password</label>
+            <input type="password" id="confirm" required>
+
+            <!-- Gender -->
+            <label>Gender</label>
+            <div class="gender">
+                <input type="radio" name="gender" required> Male
+                <input type="radio" name="gender"> Female
+                <input type="radio" name="gender"> Other
+            </div>
+
+            <!-- Terms -->
+            <div class="terms">
+                <input type="checkbox" required>
+                I agree to the Terms and Conditions
+            </div>
+
+            <!-- Submit -->
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>
